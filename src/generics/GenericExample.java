@@ -22,8 +22,23 @@ public class GenericExample {
     }
 
     @Test
-    public void boxTests(){
+    public void boxTests() {
         List<Box<String>> boxList = new ArrayList<>();
 
+        Box<String> box = new Box<>();
+        box.setObject("a string");
+
+        Box<String> box2 = new Box<>();
+        box2.setObject("Another String ");
+
+        boxList.add(box);
+        boxList.add(box2);
+
+    }
+
+    @Test
+    public void usingPairs() {
+        Pair<String, String> pair = new OrderedPair<>("akey", "avalue");
+        Pair<Integer, String> integerStringPair = new OrderedPair<>(123, "aValue");
     }
 }
