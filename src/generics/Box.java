@@ -24,4 +24,10 @@ public class Box<T> {
         this.object = object;
     }
 
+    public <U extends Number> void inspect(U u) {
+        System.out.print("T : " + object.getClass().getName());
+        System.out.print("U : " + u.getClass().getName());
+
+    }
+
 }
